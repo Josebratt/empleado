@@ -14,6 +14,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './auth/register/register.component';
+import { FormComponent } from './auth/form/form.component';
+import { ProfileComponent } from './auth/profile/profile.component';
 
 
 
@@ -23,11 +27,15 @@ import { environment } from '../environments/environment';
     AppComponent,
     NavbarComponent,
     SignInComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegisterComponent,
+    FormComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule
